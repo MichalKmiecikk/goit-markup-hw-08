@@ -1,0 +1,130 @@
+.navigation {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02;
+  text-indent: 46px;
+  margin-left: 93px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navigation a {
+  color: $text-color;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02;
+  position: relative;
+  transition-property: color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+}
+.navigation a:hover,
+.navigation a:focus,
+.navigation a:active {
+  color: $selection-color;
+}
+.navigation a:hover::after,
+.navigation a:focus::after,
+.navigation a:active::after {
+  color: $selection-color;
+  position: absolute;
+  display: inline-block;
+  top: 44px;
+  left: 0px;
+  content: "";
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $selection-color;
+}
+/* agency active */
+.navigation__agency-nav.is-active {
+  color: $selection-color;
+}
+.navigation__agency-nav.is-active::after {
+  color: $selection-color;
+  position: absolute;
+  display: inline-block;
+  top: 44px;
+  left: 0px;
+  content: "";
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $selection-color;
+}
+/* agency end */
+/* portfolio active */
+.navigation__portfolio-nav.is-active {
+  color: $selection-color;
+}
+.navigation__portfolio-nav.is-active::after {
+  color: $selection-color;
+  position: absolute;
+  display: inline-block;
+  top: 44px;
+  left: 0px;
+  content: "";
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $selection-color;
+}
+.navigation > li {
+  list-style-type: none;
+}
+.contact {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+}
+.contact > li {
+  list-style-type: none;
+}
+.contact a {
+  text-decoration: none;
+  color: $text-color;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02;
+  transition-property: fill, color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+}
+
+.contact a:hover,
+.contact a:focus,
+.contact a:active {
+  color: $selection-color;
+  fill: $selection-color;
+}
+.contact__mail-area {
+  width: 135px;
+}
+.contact__svg-mail {
+  display: inline-block;
+  width: 22px;
+  height: 16px;
+  position: absolute;
+  left: 10px;
+  bottom: 2px;
+}
+.contact__phone-area {
+  width: 110px;
+}
+.contact__svg-phone {
+  display: inline-block;
+  align-self: center;
+  width: 20px;
+  height: 16px;
+  position: absolute;
+  right: 115px;
+  top: 2px;
+}

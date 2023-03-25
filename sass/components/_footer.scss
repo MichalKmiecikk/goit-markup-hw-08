@@ -1,0 +1,146 @@
+// footer
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 252px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 60px 0px;
+
+  &__area {
+    width: 250x;
+  }
+  &__contacts-list {
+    width: auto;
+    padding-left: 0px;
+    list-style-type: none;
+    padding-bottom: 9px;
+    margin-right: 70px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03;
+  }
+  &__contacts-list li:nth-child(1) {
+    margin-top: 20px;
+  }
+  &__site {
+    text-decoration: none;
+    color: $main-white;
+    transition-property: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+  &__site:hover,
+  &__site:focus,
+  &__site:active {
+    color: $selection-color;
+  }
+  &__contact {
+    color: $text-color;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &__contact:hover,
+  &__contact:focus,
+  &__contact:active {
+    color: $selection-color;
+  }
+
+  /* footer - social links */
+  &__social-area {
+    display: block;
+    margin-left: 0px;
+    height: 80px;
+    padding-right: 76px;
+  }
+  &__social-box:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__social-title {
+    padding-bottom: 20px;
+    color: $main-white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+  &__social-boxes {
+    display: inline-flex;
+    width: auto;
+    height: 44px;
+  }
+  &__social-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: $background-footer-sl;
+    fill: $main-white;
+    border-radius: 50%;
+    transition-property: background-color, fill, box-shadow, border-radius;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+  &__social-box:hover,
+  &__social-box:focus,
+  &__social-box:active {
+    background-color: $selection-color;
+    border-radius: 50%;
+    fill: $main-white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    cursor: $cursor;
+  }
+  &__social-item {
+    width: 20px;
+    height: 20px;
+  }
+  /* newsletter */
+  &__newsletter-area {
+    position: relative;
+    width: 570px;
+    height: 86px;
+  }
+  &__newsletter-title {
+    color: $main-white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  &__email-input {
+    position: absolute;
+    display: inline-flex;
+    align-items: flex-end;
+    padding-top: 15px;
+    color: $main-white;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    bottom: 0px;
+    left: 0px;
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+  }
+  &__icon-send {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    fill: $main-white;
+    right: 28px;
+    bottom: 13px;
+  }
+}
+// end-newsletter

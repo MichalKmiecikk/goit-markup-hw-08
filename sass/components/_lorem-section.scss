@@ -1,0 +1,59 @@
+.loremSection {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    padding-left: 0px;
+    width: 1170px;
+    height: auto;
+  }
+  &__area {
+    width: 270px;
+    height: auto;
+  }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $teamsectionbackgroundn-color;
+  }
+  &__images {
+    width: 70px;
+    height: 70px;
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03;
+    width: 270px;
+    height: auto;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    justify-content: center;
+    color: $bodytext-color;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: $text-color;
+    text-align: left;
+    width: 270px;
+  }
+  &__area:not(:last-child) {
+    margin-right: 30px;
+  }
+}

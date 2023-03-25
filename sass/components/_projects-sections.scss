@@ -1,0 +1,117 @@
+.projects-section {
+  display: block;
+  justify-content: center;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__button-area {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  &__filter {
+    height: 54px;
+    width: 572px;
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 34px;
+    justify-content: center;
+  }
+  &__projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style-type: none;
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  &__card {
+    position: relative;
+    width: 370px;
+    height: 404px;
+    flex-basis: 13%;
+    display: inline-block;
+    align-content: center;
+    overflow: hidden;
+    margin: 0px;
+    border-bottom: 1px solid #eeeeee;
+    transition-property: box-shadow, border;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+  &__card:hover &__overlay {
+    transform: translateY(0%);
+  }
+  &__card:hover,
+  &__card:focus,
+  &__card:active {
+    cursor: $cursor;
+    border: 1px solid #eeeeee;
+    box-shadow: 1px 4px 6px 0px #00000029;
+  }
+  &__card-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06;
+    color: $bodytext-color;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    vertical-align: top;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  &__card-subtitle {
+    text-align: left;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    color: $text-color;
+  }
+  &__image {
+    display: block;
+    height: 294px;
+    width: 370px;
+  }
+  &__overlay {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    text-align: left;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    padding-left: 24px;
+    padding-top: 49px;
+    padding-bottom: 49px;
+    padding-right: 45px;
+    background: $projects-section-overlay-color;
+    color: $main-white;
+    transform: translateY(100%);
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+  &__overlay > p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.57;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: $main-white;
+  }
+  &__caption-area {
+    height: 110px;
+    width: 370px;
+    position: absolute;
+    z-index: 2;
+    background-color: $main-white;
+  }
+}

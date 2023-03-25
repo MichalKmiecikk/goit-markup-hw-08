@@ -1,0 +1,105 @@
+.teamcard {
+  width: auto;
+  display: block;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $teamsectionbackgroundn-color;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 0.03;
+    margin-bottom: 50px;
+  }
+  &__section {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding-left: 0px;
+    width: auto;
+  }
+  &__cards {
+    background-color: $main-white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    list-style-type: none;
+  }
+  &__figure {
+    justify-content: center;
+    display: block;
+    margin: 0px;
+  }
+  &__caption {
+    display: block;
+    padding-top: 30px;
+    text-align: center;
+  }
+  &__card-title {
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $bodytext-color;
+  }
+  &__card-text {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    color: $text-color;
+  }
+  &__social-area {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    margin-top: 16px;
+    width: 206px;
+    height: auto;
+  }
+  &__social-area > &__social-box:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__social-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    width: 44px;
+    height: 44px;
+    background-color: $main-white;
+    fill: rgba(175, 177, 184, 1);
+    border-radius: 50%;
+    transition-property: background-color, fill, box-shadow, border-radius;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+  &__social-item {
+    width: 20px;
+    height: 20px;
+  }
+  &__social-box:hover,
+  &__social-box:focus,
+  &__social-box:active {
+    background-color: $selection-color;
+    border-radius: 50%;
+    fill: $main-white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    cursor: $cursor;
+  }
+}

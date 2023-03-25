@@ -1,0 +1,30 @@
+* {
+  font-family: "Roboto", sans-serif;
+  color: $bodytext-color;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0px;
+}
+footer {
+  background-color: $footerbackground-color;
+  width: auto;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}

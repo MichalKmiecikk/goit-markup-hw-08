@@ -1,0 +1,31 @@
+%common-logo {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: 0.03;
+  font-family: "Raleway";
+}
+// logo-top
+.logo-studio-top {
+  @extend %common-logo;
+  color: $logo-black;
+}
+.logo-web-top {
+  @extend %common-logo;
+  color: $selection-color;
+}
+// end logo top
+/* logo-bottom */
+
+.logo-web-bottom {
+  @extend %common-logo;
+  margin-bottom: 20px;
+  text-align: left;
+  color: $selection-color;
+}
+.logo-studio-bottom {
+  @extend %common-logo;
+  color: $main-white;
+}
+
+/* end - logo bottom */

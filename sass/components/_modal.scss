@@ -1,0 +1,152 @@
+/* backdrop */
+.backdrop {
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  visibility: visible;
+  opacity: 1;
+  background-color: $backdrop-color;
+  transition-property: opacity, visibility, transform;
+  transition-delay: $delay;
+  transform: scale(1);
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+
+  &.is-hidden,
+  &.modal.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.1);
+  }
+}
+/* backdrop-end */
+/* modal */
+
+.modal {
+  position: absolute;
+  min-height: 581px;
+  width: 528px;
+  border-radius: $modal-border-radius;
+  opacity: 1;
+  visibility: visible;
+  background-color: $main-white;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition-property: opacity, visibility, transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  transition-delay: $delay;
+  transform: scale(1);
+
+  &__form-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  &__form-title {
+    width: $modal-input-width;
+    height: 23px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  &__form-position {
+    width: $modal-input-width;
+    height: 342px;
+    margin-bottom: 20px;
+  }
+  &__form-name,
+  &__form-phone,
+  &__form-email {
+    position: relative;
+    width: $modal-input-width;
+    height: 58px;
+    margin-bottom: 10px;
+  }
+  &__icon-human,
+  &__icon-phone,
+  &__icon-email {
+    position: absolute;
+    display: flex;
+    width: $icon-width;
+    height: $icon-height;
+    bottom: 11px;
+    left: 12px;
+    transition: fill;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+
+  &__form-textarea {
+    width: $modal-input-width;
+    height: 138px;
+    margin-bottom: 10px;
+  }
+}
+
+/* order  */
+.order-form {
+  &__label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-bottom: $modal-border-radius;
+    color: $text-color;
+  }
+  &__input {
+    width: $modal-input-width;
+    height: 40px;
+    border: $modal-border;
+    border-radius: $modal-border-radius;
+    padding-left: 42px;
+    transition-property: border-color, fill;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+  &__input:focus {
+    outline: none;
+    border-color: $selection-color;
+  }
+  &__input-textarea:focus {
+    outline: none;
+    border-color: $selection-color;
+  }
+  &__input:focus + .modal__icon-human,
+  &__input:focus + .modal__icon-email,
+  &__input:focus + .modal__icon-phone {
+    fill: $selection-color;
+  }
+  &__input-textarea {
+    width: $modal-input-width;
+    height: 120px;
+    border: $modal-border;
+    border-radius: $modal-border-radius;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: $modal-border-radius;
+    letter-spacing: 0.01em;
+    text-align: left;
+    align-items: center;
+    padding: 12px 16px;
+    resize: none;
+    transition-property: border-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+}
+/* end - order-form */

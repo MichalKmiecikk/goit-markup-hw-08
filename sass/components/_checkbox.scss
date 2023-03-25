@@ -1,0 +1,59 @@
+/* custom-checkbox */
+.custom-checkbox {
+  position: relative;
+  width: 419px;
+  height: 24px;
+  margin-bottom: 30px;
+
+  &__input {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    cursor: $cursor;
+    left: 0px;
+    top: 4px;
+    transition: visibility;
+  }
+  &__label {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-align: left;
+    padding-left: 23px;
+    align-items: baseline;
+  }
+  &__bird {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    visibility: hidden;
+    left: 0px;
+    top: 4px;
+    cursor: $cursor;
+    transition: visibility;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  }
+  &__reg {
+    text-decoration: underline;
+    color: $selection-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+
+  &__input:checked {
+    opacity: 0;
+    z-index: 2;
+  }
+  &__input:checked ~ &__bird {
+    visibility: visible;
+    z-index: 1;
+  }
+}
+
+
