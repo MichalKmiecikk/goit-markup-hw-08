@@ -144,3 +144,37 @@
   }
 }
 // end-newsletter
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    display: block;
+    text-align: center;
+    width: 450px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__area {
+      display: block;
+      text-align: center;
+    }
+    &__contacts-list {
+      margin-right: 0px;
+      margin-bottom: 60px;
+    }
+    &__social-area {
+      display: inline-block;
+      justify-content: center;
+      padding-right: 0px;
+    }
+    &__social-title {
+      text-align: center;
+    }
+    &__newsletter-area {
+      width: 450px;
+      height: 156px;
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
