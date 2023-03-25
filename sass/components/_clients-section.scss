@@ -21,9 +21,6 @@
     margin-right: auto;
     fill: $svg-icons-color;
   }
-  &__image-card:not(:last-child) {
-    margin-right: 30px;
-  }
   &__image-card {
     display: flex;
     justify-content: center;
@@ -36,6 +33,9 @@
     transition-duration: $transition-duration;
     transition-timing-function: $timing-function;
   }
+  &__image-card:not(:last-child) {
+    margin-right: 30px;
+  }
   &__image-card:hover,
   &__image-card:focus,
   &__image-card:active {
@@ -47,5 +47,32 @@
   &__image {
     width: 106px;
     height: 60px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .clients-section {
+    width: 450px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__image-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+    }
+    &__image-card {
+      width: 210px;
+      height: 92px;
+    }
+    &__image-card:not(:last-child) {
+      margin-right: 0px;
+    }
   }
 }
