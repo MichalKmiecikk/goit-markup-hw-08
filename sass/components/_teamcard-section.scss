@@ -103,3 +103,24 @@
     cursor: $cursor;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .teamcard {
+    width: 100%;
+    height: 2761px;
+    padding-top: 60px;
+    &__list {
+      flex-direction: column;
+    }
+    &__cards {
+      display: inline-block;
+    }
+    &__figure > img {
+      width: 450px;
+      height: 460px;
+    }
+    &__title {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
