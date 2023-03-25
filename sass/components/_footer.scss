@@ -2,7 +2,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  height: 252px;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
   padding: 60px 0px;
@@ -152,14 +152,13 @@
     height: auto;
     padding-top: 60px;
     padding-bottom: 60px;
-
     &__area {
       display: block;
       text-align: center;
     }
     &__contacts-list {
       margin-right: 0px;
-      margin-bottom: 60px;
+      padding-bottom: 60px;
     }
     &__social-area {
       display: inline-block;
@@ -172,9 +171,29 @@
     &__newsletter-area {
       width: 450px;
       height: 156px;
-      margin-top: 60px;
+      padding-top: 60px;
+      padding-bottom: 60px;
       display: flex;
       justify-content: center;
     }
+    &__newsletter-title {
+      display: block;
+      text-align: center;
+      height: auto;
+      padding-bottom: 20px;
+    }
+    &__email-input {
+      padding-top: 10px;
+      width: 450px;
+      height: 50px;
+    }
+  }
+  .footer__icon-send {
+    bottom: -57px;
+    right: 153px;
+  }
+  .newsletter-button {
+    bottom: -70px;
+    left: 125px;
   }
 }
