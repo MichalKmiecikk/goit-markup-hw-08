@@ -135,3 +135,34 @@
   }
 }
 // 480
+// 768
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .teamcard {
+    padding-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    align-self: center;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+      flex-basis: auto;
+      justify-content: space-between;
+      max-width: 738px;
+      height: auto;
+    }
+    &__cards {
+      width: 354px;
+      height: 536px;
+    }
+    &__figure > img {
+      width: 354px;
+      height: auto;
+    }
+  }
+}
