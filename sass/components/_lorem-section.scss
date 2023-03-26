@@ -16,6 +16,7 @@
   &__area {
     width: 270px;
     height: auto;
+    margin-right: 0px;
   }
   &__cards {
     display: flex;
@@ -83,14 +84,11 @@
       width: 100%;
       margin-right: 0px;
     }
-    &__area:not(:last-child) {
-      margin-right: 0px;
-    }
   }
 }
 // 480
 // 768
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .loremSection {
     padding-top: 60px;
     margin-bottom: 45px;
@@ -115,5 +113,10 @@
     &__text {
       width: 354px;
     }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .loremSection__area:not(:last-child) {
+    margin-right: 30px;
   }
 }

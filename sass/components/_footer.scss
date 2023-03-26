@@ -147,10 +147,11 @@
 // 480
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .footer {
+    position: relative;
     display: block;
     text-align: center;
     width: 450px;
-    height: auto;
+    height: 603px;
     padding-top: 60px;
     padding-bottom: 60px;
     &__area {
@@ -188,10 +189,15 @@
       width: 450px;
       height: 50px;
     }
-  }
-  .footer__icon-send {
-    bottom: -57px;
-    right: 153px;
+
+    &__icon-send {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      fill: $main-white;
+      right: 150px;
+      bottom: -58px;
+    }
   }
   .newsletter-button {
     bottom: -70px;
@@ -199,3 +205,82 @@
   }
 }
 // 480
+// 768
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    display: flex;
+    text-align: center;
+    align-content: space-between;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 463px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__area {
+      position: absolute;
+      display: block;
+      width: 253px;
+      height: auto;
+      top: 60px;
+      left: 76px;
+    }
+    &__contacts-list {
+      margin-right: 0px;
+    }
+    &__site {
+      font-size: 14px;
+    }
+    &__social-area {
+      position: absolute;
+      display: block;
+      justify-content: center;
+      top: 67px;
+      right: 89px;
+      padding-right: 0px;
+      width: 206px;
+      height: 80px;
+    }
+    &__social-title {
+      text-align: center;
+    }
+    &__newsletter-area {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 247px;
+      right: 159px;
+      width: 450px;
+      height: 156px;
+      display: flex;
+      justify-content: center;
+    }
+    &__newsletter-title {
+      display: block;
+      text-align: center;
+      height: auto;
+      padding-bottom: 20px;
+    }
+    &__newsletter-box {
+      width: 100%;
+      height: 120px;
+    }
+    &__email-input {
+      bottom: 70px;
+      width: 100%;
+    }
+    &_newsletter-btn-area {
+      width: 200px;
+      height: 50px;
+    }
+    &__icon-send {
+      right: 150px;
+    }
+    .newsletter-button {
+      bottom: 0px;
+      right: 125px;
+      align-items: center;
+    }
+  }
+}
+// 768

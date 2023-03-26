@@ -152,7 +152,7 @@
 }
 /* end - order-form */
 // 480
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 1199px) {
   @include mobile-modal-window-and-input(
     $mobile-window-width,
     $mobile-window-height,
