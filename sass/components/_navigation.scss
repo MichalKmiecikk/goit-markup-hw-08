@@ -128,3 +128,31 @@
   right: 115px;
   top: 2px;
 }
+// 480
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+}
+// 480
+// 769
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contact {
+    display: block;
+    &__svg-phone {
+      left: 10px;
+    }
+    &__mail-area {
+      margin-bottom: 10px;
+    }
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 282px;
+    text-indent: 0px;
+  }
+}

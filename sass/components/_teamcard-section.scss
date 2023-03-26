@@ -103,8 +103,8 @@
     cursor: $cursor;
   }
 }
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
+// 480
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .teamcard {
     width: 100%;
     height: auto;
@@ -134,3 +134,4 @@
     }
   }
 }
+// 480

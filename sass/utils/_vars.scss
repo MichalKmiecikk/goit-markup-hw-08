@@ -12,6 +12,8 @@ $projects-section-overlay-color: rgba(33, 150, 243, 0.9);
 $backdrop-color: rgba(0, 0, 0, 0.2);
 $cursor: pointer;
 $delay: 250ms;
+$transition-duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 // modal
 $modal-input-width: 448px;
 $modal-border-radius: 4px;
@@ -20,7 +22,40 @@ $icon-width: 18px;
 $icon-height: 18px;
 $modal-border: 1px solid rgba(33, 33, 33, 0.2);
 
-$transition-duration: 250ms;
-$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
+// mobile
+$mobile-window-width: 450px;
+$mobile-window-height: 609px;
+$mobile-modal-input-width: 370px;
+// mixin
+@mixin mobile-modal-window-and-input(
+  $mobile-window-width,
+  $mobile-window-height,
+  $modal-input-width-mobile
+) {
+  .modal {
+    width: $mobile-window-width;
+    height: $mobile-window-height;
+    &__form-title {
+      width: $modal-input-width-mobile;
+    }
+    &__form-position {
+      width: $modal-input-width-mobile;
+    }
+    &__input-textarea {
+      width: $modal-input-width-mobile;
+    }
+    &__form-name,
+    &__form-phone,
+    &__form-email {
+      width: $modal-input-width-mobile;
+    }
+  }
+  .order-form {
+    &__input {
+      width: $modal-input-width-mobile;
+    }
+    &__input-textarea {
+      width: $modal-input-width-mobile;
+    }
+  }
+}
