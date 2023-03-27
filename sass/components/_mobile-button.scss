@@ -1,63 +1,12 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-  color: #212121;
-  background-color: #fff;
-}
-
-.container {
-  min-width: 320px;
-  max-width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-header {
-  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
-    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-}
-
-.page-header .container {
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.menu {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-@media (max-width: 767px) {
-  .menu {
-    display: none;
-  }
-}
-
-.menu .link {
-  padding: 10px;
-  color: inherit;
-  text-decoration: none;
-}
-
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
-}
-
-.menu-toggle {
+.mobile-menu-button {
+  position: fixed;
+  right: 15px;
+  top: 20px;
   min-height: 40px;
   min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -66,17 +15,17 @@ body {
   border-radius: 50%;
   outline: none;
 }
-
-@media (min-width: 768px) {
-  .menu-toggle {
+@media (min-width: 767px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .menu {
     display: none;
   }
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
 .menu-container {
   position: fixed;
@@ -84,34 +33,99 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
+  background-color: $main-white;
   z-index: 999;
-
   transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
 }
-
 .menu-container.is-open {
   transform: translateX(0);
 }
 
-.menu-container .menu-toggle {
+.mobile-menu-button {
   position: absolute;
   top: 16px;
   right: 16px;
   color: #fff;
+  fill: $bodytext-color;
+  &:hover,
+  &:focus,
+  &:active {
+    fill: $selection-color;
+  }
 }
 
 .mobile-menu {
   padding: 0;
-  margin: 0;
+  margin-top: 48px;
+  margin-left: 40px;
+  margin-bottom: 250px;
   list-style: none;
+  & .link {
+    display: block;
+    margin-bottom: 32px;
+    color: $bodytext-color;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 0.85;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 32px;
+  }
+  & .link:hover,
+  & .link:focus,
+  & .link:active {
+    color: $selection-color;
+    cursor: $cursor;
+  }
 }
+.mobile-menu__phone,
+.mobile-menu__mail {
+  list-style-type: none;
+  margin-bottom: 32px;
+}
+.mobile-menu__phone .link {
+  color: $selection-color;
+  font-family: Roboto;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 32px;
+  cursor: $cursor;
+}
+.mobile-menu__mail .link {
+  color: $text-color;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 64px;
+  cursor: $cursor;
+}
+.mobile-menu__social-links {
+  list-style-type: none;
+  display: inline-block;
 
-.mobile-menu .link {
-  display: block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
+  & .link {
+    color: $selection-color;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 0.82;
+    letter-spacing: 0.02em;
+    text-align: left;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  & .link:not(:last-child) {
+    border-right: 1px solid $text-color;
+  }
 }

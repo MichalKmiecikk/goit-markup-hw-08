@@ -34,3 +34,10 @@
     width: auto;
   }
 }
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .box {
+    background-image: url(../images/main@2.jpg);
+  }
+}
